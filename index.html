@@ -3,21 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Site Coming Soon</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f1f5f9;color:#1C1F24;min-height:100vh;display:flex;align-items:center;justify-content:center}
-.card{text-align:center;background:#fff;border-radius:16px;padding:3rem 2.5rem;box-shadow:0 1px 3px rgba(0,0,0,.08);max-width:480px;margin:1rem}
-h1{font-size:1.5rem;margin-bottom:.5rem}
-p{color:#5F6B7A;line-height:1.6}
-.brand{color:#2EA8FF;font-weight:700}
-</style>
+<title>The Blackfish Café — Rosario Harbor, Orcas Island</title>
+<meta name="description" content="Coffee, refined breakfast and lunch in The Beach House at Rosario Harbor. Counter service 8a–6p with an unobstructed view of Cascade Bay on Orcas Island.">
+<meta property="og:title" content="The Blackfish Café — Rosario Harbor">
+<meta property="og:description" content="Coffee, refined summer breakfast and lunch in The Beach House at Rosario. The easy rhythm of island life on Cascade Bay.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="card">
-<h1>Your site is being set up</h1>
-<p>We're getting everything ready for you. Check back soon!</p>
-<p style="margin-top:1.5rem;font-size:.85rem">Powered by <a href="https://freewave.dev" style="color:#2EA8FF;font-weight:700;text-decoration:none">Freewave.dev</a></p>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Rosario Harbor <span class="sep">·</span> Orcas Island, WA</span>
+    <span>Counter service daily <a href="#visit">8a — 6p</a></span>
+  </div>
 </div>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <div class="nav__links nav__links--left">
+      <a href="#welcome">The Café</a>
+      <a href="#lawn">Lunch on the Lawn</a>
+      <a href="#beachhouse">The Beach House</a>
+    </div>
+
+    <a href="#" class="brand" aria-label="Blackfish Café — home">
+      BLACKFISH
+      <small>Rosario Harbor · Est. 2026</small>
+    </a>
+
+    <div class="nav__links nav__links--right">
+      <a href="#story">Story</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn btn--dark">Menu Soon <span class="arrow"></span></a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero__image"></div>
+  <div class="wrap hero__content">
+    <p class="hero__eyebrow">A Café on Cascade Bay</p>
+    <h1 class="hero__title">The easy rhythm of island life.</h1>
+    <p class="hero__sub">Coffee at first light, refined summer breakfast and lunch, and the long horizon of the Salish Sea — served from The Beach House at Rosario Harbor.</p>
+    <div class="hero__meta">
+      <a href="#welcome" class="btn btn--gold">Discover the Café <span class="arrow"></span></a>
+      <a href="#visit" class="btn btn--light">Plan a Visit <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap bar__row">
+    <span>Counter Service 8 — 6</span>
+    <span class="dot"></span>
+    <span>Lunch on the Lawn</span>
+    <span class="dot"></span>
+    <span>Bay-View Seating</span>
+    <span class="dot"></span>
+    <span>Inside The Beach House</span>
+  </div>
+</div>
+
+<section class="intro" id="welcome">
+  <div class="wrap intro__grid">
+    <div class="intro__text reveal">
+      <span class="eyebrow">Welcome to Blackfish</span>
+      <h2>Pacific Northwest, the way the Islands taught us.</h2>
+      <p>Nestled into The Beach House at Rosario Harbor, Blackfish Café opens each morning to coffee, careful pastry, and the slow flicker of light across Cascade Bay. By midday the menu turns to bright, summer-leaning plates — the kind built for long lunches with a view.</p>
+      <p>Inspired by the natural beauty and community spirit of the San Juan Islands, we offer a casual, elevated space to gather, unwind, and savor the best of the Pacific Northwest.</p>
+      <p class="intro__signature">— A new gathering place in Rosario Harbor.</p>
+    </div>
+    <div class="intro__image reveal" role="img" aria-label="Hand-poured coffee at the café bar">
+      <div class="intro__tag">Open Daily · 8a — 6p</div>
+    </div>
+  </div>
+</section>
+
+<section class="lawn" id="lawn">
+  <div class="split">
+    <div class="split__media split__media--lawn" role="img" aria-label="Picnic tables and white umbrellas on the lawn at Rosario, with Cascade Bay beyond"></div>
+    <div class="split__text reveal">
+      <span class="eyebrow">Lunch on the Lawn</span>
+      <h2>Picnic tables, sea breeze, and an unobstructed view.</h2>
+      <p>When the sun is high we move outside — long picnic tables, broad umbrellas, and the kind of breeze that slows everything down. Cascade Bay opens wide in front of you, and lunch becomes a small ceremony.</p>
+      <p>It's casual, it's elevated, and it's one of the more pleasant ways to spend an afternoon in the San Juans.</p>
+      <a href="#visit" class="btn btn--dark split__cta">Find the Lawn <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="lawn" id="beachhouse" style="padding-top:0">
+  <div class="split split--reverse">
+    <div class="split__text reveal">
+      <span class="eyebrow">The Beach House</span>
+      <h2>Bay windows. Big history. The new hub of Rosario.</h2>
+      <p>Blackfish lives inside The Beach House — comfortable, inviting indoor seating framed by giant windows that look straight onto the bay. Inside, it's warm and unhurried; outside, the patio runs warm right up to the water.</p>
+      <p>The Beach House has long been a gathering place at Rosario — by some accounts the largest event space in San Juan County — and it's now the heart of the resort's new chapter.</p>
+      <a href="#story" class="btn btn--dark split__cta">A Brief History <span class="arrow"></span></a>
+    </div>
+    <div class="split__media split__media--beach" role="img" aria-label="Bay windows of The Beach House overlooking Cascade Bay"></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="story__wrap reveal">
+    <span class="eyebrow">A Place with a Past</span>
+    <blockquote>"Rosario was carved out of these hills more than a century ago — a quiet harbor that has been gathering people ever since."</blockquote>
+    <p class="story__cite">Cascade Bay · Orcas Island · Since 1909</p>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip__grid">
+    <div class="strip__cell strip__cell--a"></div>
+    <div class="strip__cell strip__cell--b"></div>
+    <div class="strip__cell strip__cell--c"></div>
+    <div class="strip__cell strip__cell--d"></div>
+  </div>
+</div>
+
+<section class="visit" id="visit">
+  <div class="wrap visit__grid">
+    <div class="reveal">
+      <span class="eyebrow">Plan a Visit</span>
+      <h2 class="visit__title">Find us at The Beach House.</h2>
+      <p class="visit__lede">Counter service from morning coffee through the afternoon. No reservations needed — pull up a chair inside, or take a plate out to the lawn and watch the harbor move.</p>
+
+      <div class="info">
+        <div class="info__block">
+          <h4>Hours</h4>
+          <ul>
+            <li><span>Monday — Sunday</span><span>8a — 6p</span></li>
+            <li><span>Breakfast</span><span>8a — 11a</span></li>
+            <li><span>Lunch on the Lawn</span><span>11a — 4p</span></li>
+            <li><span>Afternoon</span><span>4p — 6p</span></li>
+          </ul>
+        </div>
+        <div class="info__block">
+          <h4>Service</h4>
+          <ul>
+            <li><span>Counter Order</span><span>All Day</span></li>
+            <li><span>Coffee &amp; Pastry</span><span>From 8a</span></li>
+            <li><span>Seating</span><span>Indoor + Lawn</span></li>
+            <li><span>Events</span><span>Inquire</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <aside class="visit__card reveal">
+      <h3>The Beach House at Rosario</h3>
+      <p>The new hub of Rosario Resort, on the south shore of Cascade Bay.</p>
+      <p class="visit__address">1608 Rosario Road<br>Eastsound, WA 98245</p>
+      <p style="color: rgba(245,239,230,0.6); font-family: var(--mark); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 2rem;">Orcas Island · San Juan County</p>
+      <a href="https://maps.google.com/?q=1608+Rosario+Road+Eastsound+WA" target="_blank" rel="noopener" class="btn btn--gold" style="margin-top: 2rem;">Get Directions <span class="arrow"></span></a>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">BLACKFISH</div>
+        <p class="footer__tag">Coffee, refined island fare, and the easy rhythm of life on Cascade Bay.</p>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>The Beach House</li>
+          <li>1608 Rosario Road</li>
+          <li>Eastsound, WA 98245</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Hours</h5>
+        <ul>
+          <li>Daily · 8a — 6p</li>
+          <li>Counter Service</li>
+          <li>Lawn Seating in Season</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://instagram.com/blackfishcafeorcas" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Private Events</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 The Blackfish Café · Rosario Harbor</span>
+      <span>Powered by <a href="https://freewave.dev">Freewave.dev</a></span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
