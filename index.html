@@ -129,7 +129,6 @@ h1,h2,h3,h4{
   display:flex;align-items:center;justify-content:space-between;
   padding:1.15rem 3.2rem;
   background:var(--black);
-  border-bottom:1px solid rgba(255,255,255,.06);
 }
 .nav ul{list-style:none;display:flex;gap:2.6rem;align-items:center}
 .nav ul a{
@@ -147,6 +146,7 @@ h1,h2,h3,h4{
   grid-template-columns:1fr 1fr;
   min-height:100vh;
   padding-top:74px;
+  background:var(--black);
 }
 .hero-photo{
   position:relative;
@@ -239,16 +239,6 @@ h1,h2,h3,h4{
   transition:transform 1.5s cubic-bezier(.16,1,.3,1),filter .6s;
 }
 .strip a:hover img{transform:scale(1.07)}
-.strip a::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62));
-}
-.strip .cap{
-  position:absolute;left:0;right:0;bottom:1.3rem;z-index:2;text-align:center;
-  font-family:'Jost',sans-serif;
-  font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;
-  color:#fff;opacity:.92;
-}
 
 /* ─── HISTORY ─── */
 .history{
@@ -330,13 +320,14 @@ footer{
   .hero-copy{padding:4rem 2rem}
   .band{padding:3.5rem 1.6rem}
   .band-grid{grid-template-columns:1fr;gap:0}
-  .band-col{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:2.6rem 0 0}
+  .band-col{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:2.6rem 0 0;text-align:center}
   .band-col:first-child{border-top:0;padding-top:0}
   .band-col:last-child{padding-right:0}
+  .band-col .ico{margin-left:auto;margin-right:auto}
   .strip{grid-template-columns:repeat(2,1fr)}
   .history{grid-template-columns:1fr}
-  .history-copy{padding:4rem 2rem;order:2}
-  .history-photo{order:1;min-height:300px}
+  .history-copy{padding:4rem 2rem;order:1}
+  .history-photo{order:2;min-height:300px}
   .footer-grid{grid-template-columns:1fr;justify-items:center;text-align:center;gap:1.4rem}
   .footer-social{justify-content:center}
   .footer-tag{white-space:normal}
@@ -436,19 +427,15 @@ footer{
 <section class="strip" aria-label="Around Blackfish Café">
   <a href="#about">
     <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=900&q=80&auto=format&fit=crop" alt="Cafe interior with warm wood and big windows">
-    <span class="cap">Inside, by the windows</span>
   </a>
   <a href="#about">
     <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=80&auto=format&fit=crop" alt="Latte and fresh pastry">
-    <span class="cap">Coffee &amp; beverages</span>
   </a>
   <a href="#location">
     <img src="images/bay-view.webp" alt="View across Cascade Bay from the Blackfish Café deck">
-    <span class="cap">Unmatched views</span>
   </a>
   <a href="#about">
     <img src="images/cafe-sign.webp" alt="Blackfish Café signage at The Beach House">
-    <span class="cap">The Beach House</span>
   </a>
 </section>
 
