@@ -303,6 +303,53 @@ footer{
 }
 .footer-legal a{color:var(--gold)}
 
+/* ─── GETTING HERE ─── */
+.arrive{background:var(--cream);padding:6.5rem 3.2rem}
+.arrive-inner{max-width:1180px;margin:0 auto}
+.arrive-head{max-width:44rem;margin-bottom:3rem}
+.arrive-head h2{
+  font-size:clamp(2.2rem,3.6vw,3.4rem);
+  text-transform:uppercase;letter-spacing:.005em;margin:.2rem 0 1.4rem;
+}
+.arrive-head h2 .alt{color:var(--gold);display:block}
+.arrive-head p{color:var(--muted-dark);font-size:1.02rem;max-width:36rem}
+.arrive-address{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.4rem;
+  border-top:1px solid var(--line-light);border-bottom:1px solid var(--line-light);
+  padding:1.4rem 0;margin-bottom:3.4rem;
+}
+.arrive-address .t{
+  font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.arrive-address .v{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink)}
+.arrive-address .link{
+  font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.arrive-address .link:hover{color:var(--ink)}
+.arrive-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 3.6rem}
+.arrive-card{border-top:1px solid var(--line-light);padding-top:1.7rem}
+.arrive-card .ico{width:34px;height:34px;color:var(--gold);margin-bottom:1.3rem}
+.arrive-card .ico svg{width:100%;height:100%;display:block}
+.arrive-card h3{
+  font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+  font-weight:500;color:var(--ink);margin-bottom:1rem;
+}
+.arrive-card p{color:var(--muted-dark);font-size:.98rem;margin-bottom:.9rem}
+.arrive-card p:last-child{margin-bottom:0}
+.arrive-card a{color:var(--gold)}
+.arrive-card a:hover{color:var(--ink)}
+.arrive-card .note{font-size:.82rem;line-height:1.6;color:var(--muted-dark);opacity:.82}
+.arrive-list{list-style:none;margin:.2rem 0 .4rem}
+.arrive-list li{
+  display:flex;justify-content:space-between;gap:1.2rem;
+  padding:.55rem 0;border-bottom:1px dotted var(--line-light);
+  font-size:.96rem;color:var(--ink);
+}
+.arrive-list li:last-child{border-bottom:0}
+.arrive-list .num{color:var(--muted-dark);white-space:nowrap}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width:900px){
   .nav{padding:1rem 1.4rem}
@@ -343,6 +390,10 @@ footer{
   .history{grid-template-columns:1fr}
   .history-copy{padding:4rem 2rem;order:1}
   .history-photo{order:2;min-height:300px}
+  .arrive{padding:4rem 1.6rem}
+  .arrive-grid{grid-template-columns:1fr;gap:0}
+  .arrive-card{padding-top:2rem;margin-top:2rem}
+  .arrive-card:first-child{margin-top:0}
   .footer-grid{grid-template-columns:1fr;justify-items:center;text-align:center;gap:1.4rem}
   .footer-social{justify-content:center}
   .footer-tag{white-space:normal}
@@ -433,6 +484,64 @@ footer{
         <li>Unmatched Views</li>
       </ul>
       <a class="btn btn--ghost-light" href="#about">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="arrive" aria-labelledby="getting-here">
+  <div class="arrive-inner">
+    <div class="arrive-head">
+      <span class="eyebrow">Plan Your Visit</span>
+      <h2 id="getting-here">Getting Here<span class="alt">Drive, sail, hike, or fly in.</span></h2>
+      <p>Tucked into Rosario Harbor on the east side of Orcas Island, Blackfish Café at The Beach House is easy to reach by nearly every form of Pacific Northwest transport.</p>
+    </div>
+
+    <div class="arrive-address">
+      <span class="t">Address</span>
+      <span class="v">The Beach House · 1424 Rosario Road, Eastsound, WA 98245</span>
+      <a class="link" href="https://maps.google.com/?q=Rosario+Resort+Eastsound+WA+98245" target="_blank" rel="noopener">View on Google Maps</a>
+    </div>
+
+    <div class="arrive-grid">
+      <div class="arrive-card">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 13l1.6-4.6A2 2 0 0 1 6.5 7h11a2 2 0 0 1 1.9 1.4L21 13v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7" cy="14.5" r="1.2"/><circle cx="17" cy="14.5" r="1.2"/></svg>
+        </div>
+        <h3>By Car</h3>
+        <p>Free parking is available for guests. Need a ride? Three Orcas Island taxi services serve the harbor:</p>
+        <ul class="arrive-list">
+          <li>Scenic Shuttle <span class="num">(360) 298-8414</span></li>
+          <li>Keith's Taxi <span class="num">(360) 298-1639</span></li>
+          <li>Orcas Island Taxi <span class="num">(360) 376-8294</span></li>
+        </ul>
+      </div>
+
+      <div class="arrive-card">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="5" r="2.4"/><path d="M12 7.4V21"/><path d="M5 12H2.5a9.5 9.5 0 0 0 19 0H19"/><path d="M8.5 12H4M16 12h4"/></svg>
+        </div>
+        <h3>By Boat</h3>
+        <p>Day-use moorage at Rosario Harbor is available for guests. Purchase moorage online at <a href="https://rosarioharbor.com" target="_blank" rel="noopener">rosarioharbor.com</a> and bring your receipt.</p>
+        <p class="note">Vessels up to 30′: $25 moorage, reimbursed on qualifying harbor receipts of $25+. For 30–50′ vessels: $40, reimbursed on receipts of $75+.</p>
+      </div>
+
+      <div class="arrive-card">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 20h18"/><path d="m5 20 5.5-11L15 16"/><path d="m13 13 2.5-4L21 20"/></svg>
+        </div>
+        <h3>By Foot</h3>
+        <p>Camping at Moran State Park? The café is an easy walk from Cascade Lake — about 1.25 miles from the North End campground (1.5 mi from South End, 2 mi from Midway).</p>
+        <p>Hike around the lake, follow the spillway down to the harbor — roughly 360 ft of elevation change.</p>
+      </div>
+
+      <div class="arrive-card">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 4 10.5 12.5"/><path d="M21 4 14 21l-3.5-8.5L2 9z"/><path d="M4 21h9"/></svg>
+        </div>
+        <h3>By Seaplane</h3>
+        <p>Rosario Harbor is a scheduled stop for <a href="https://www.kenmoreair.com" target="_blank" rel="noopener">Kenmore Air</a> and <a href="https://fridayharborseaplanes.com" target="_blank" rel="noopener">Friday Harbor Seaplanes</a>.</p>
+        <p>Flying your own floatplane? Call the Marina at <a href="tel:+13604724866">(360) 472-4866</a>.</p>
+      </div>
     </div>
   </div>
 </section>
