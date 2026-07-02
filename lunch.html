@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beverages — Blackfish Café at Rosario Harbor</title>
-<meta name="description" content="Beer, wine, coffee &amp; more at Blackfish Café — Pacific Northwest brews, a curated wine list, and Local Goods coffee at The Beach House, Rosario Harbor, Eastsound, WA.">
+<title>Lunch — Blackfish Café at Rosario Harbor</title>
+<meta name="description" content="Lunch on the Lawn at Blackfish Café — picnic plates, fry time, handhelds and refined summer flavors at The Beach House, Rosario Harbor, Eastsound, WA.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#0d0d0d">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Blackfish Café">
-<meta property="og:title" content="Beverages — Blackfish Café">
-<meta property="og:description" content="Beer, wine, coffee &amp; more — Pacific Northwest brews and a curated list at Rosario Harbor.">
-<meta property="og:url" content="https://y0o3t4.freewave.dev/beverages.html">
+<meta property="og:title" content="Lunch — Blackfish Café">
+<meta property="og:description" content="Lunch on the Lawn — picnic plates, fry time and handhelds served close to the water at Rosario Harbor.">
+<meta property="og:url" content="https://y0o3t4.freewave.dev/lunch.html">
 <meta property="og:image" content="https://media.freewave.dev/y0o3t4/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Beverages — Blackfish Café">
-<meta name="twitter:description" content="Beer, wine, coffee &amp; more at Rosario Harbor.">
-<meta name="twitter:image" content="https://media.freewave.dev/y0o3t4/images/og-image.jpg">
+<meta name="twitter:title" content="Lunch — Blackfish Café">
+<meta name="twitter:description" content="Lunch on the Lawn — picnic plates, fry time and handhelds at Rosario Harbor.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -213,13 +212,6 @@ h1,h2,h3,h4{
   font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
   color:var(--gold-soft);margin-left:.55rem;
 }
-
-/* ─── SIMPLE DRINK LIST ─── */
-.drink-list{list-style:none;text-align:center;max-width:32rem;margin:0 auto}
-.drink-list li{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;color:var(--ink);line-height:1.85;
-}
 .menu-foot{
   max-width:1080px;margin:1rem auto 0;padding:2.6rem 2rem 5.5rem;
   text-align:center;
@@ -227,6 +219,11 @@ h1,h2,h3,h4{
 .menu-foot p{
   font-family:'Cormorant Garamond',serif;font-style:italic;
   font-size:1.15rem;color:var(--muted-dark);max-width:40rem;margin:0 auto 1.8rem;
+}
+.menu-foot .fine{
+  font-family:'Jost',sans-serif;font-style:normal;
+  font-size:.72rem;letter-spacing:.04em;color:var(--muted-dark);opacity:.85;
+  max-width:42rem;margin:0 auto 2rem;
 }
 .menu-foot .btn{margin:.4rem}
 
@@ -308,8 +305,8 @@ footer{
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="menu.html">Breakfast</a></li>
-    <li><a href="lunch.html">Lunch</a></li>
-    <li><a href="beverages.html" class="active">Beverages</a></li>
+    <li><a href="lunch.html" class="active">Lunch</a></li>
+    <li><a href="beverages.html">Beverages</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#location">Location</a></li>
   </ul>
@@ -317,128 +314,123 @@ footer{
 
 <header class="menu-head">
   <div class="menu-head-inner hero-inner">
-    <span class="eyebrow">Drinks</span>
-    <h1>Beverages</h1>
+    <span class="eyebrow">Lunch on the Lawn</span>
+    <h1>The Lawn</h1>
     <div class="hero-rule"></div>
-    <p>Pacific Northwest beer &amp; cider, a curated wine list, and Local Goods coffee roasted right here on Orcas — poured with the bay in view.</p>
+    <p>Midday on the lawn — picnic plates to share, fried favorites and handhelds, served through the afternoon with the bay in view.</p>
   </div>
 </header>
 
 <main class="menu-wrap">
 
-  <section class="menu-section" aria-labelledby="beer">
+  <section class="menu-section" aria-labelledby="pn">
     <div class="menu-section-head">
-      <h2 id="beer">Beer &amp; Cider</h2>
+      <h2 id="pn">Picnic</h2>
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="row"><span class="name">Amber</span><span class="dots"></span><span class="price">9</span></div>
-        <p class="desc">Terramar Brewstillery · Edison, WA.</p>
+        <div class="row"><span class="name">Smoked Fish Dip</span><span class="dots"></span><span class="price">18</span></div>
+        <p class="desc">Smoked rock fish, spiced cream, crispy capers, herbs, saltines.</p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">Lucy's Pilsner</span><span class="dots"></span><span class="price">9</span></div>
-        <p class="desc">Island Hoppin' Brewery · Orcas Island, WA.</p>
+        <div class="row"><span class="name">Raw Oysters<span class="tag">Raw</span></span><span class="dots"></span><span class="price">24 / 48</span></div>
+        <p class="desc">Mignonette, cocktail, lemon, saltines. Half dozen 24 · dozen 48.</p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">Vantage Hard Cider</span><span class="dots"></span><span class="price">9</span></div>
-        <p class="desc">Yonder · Wenatchee, WA.</p>
+        <div class="row"><span class="name">Weeds Salad</span><span class="dots"></span><span class="price">18</span></div>
+        <p class="desc">Artisan lettuce, baby greens, shaved radish, pickled red onion, pistachio dukkah, champagne vinaigrette.<span class="tag">Veg</span></p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">Scenic Byway Cold IPA</span><span class="dots"></span><span class="price">9</span></div>
-        <p class="desc">Larrabee Lager Co. · Bellingham, WA.</p>
+        <div class="row"><span class="name">Melon Salad</span><span class="dots"></span><span class="price">22</span></div>
+        <p class="desc">Compressed watermelon, pickled rind, marinated cucumber, prosciutto, queso fresco, spiced pepitas, cherry pepper vinaigrette.</p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">West Coast IPA</span><span class="dots"></span><span class="price">6.5</span></div>
-        <p class="desc">Best Dau Brewing.<span class="tag">NA</span></p>
+        <div class="row"><span class="name">Smoked Rockfish Chowder</span><span class="dots"></span><span class="price">8 / 12</span></div>
+        <p class="desc">Yukon gold potato, holy trinity, cream, herbs. Cup 8 · bowl 12.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Meat &amp; Cheese Board</span><span class="dots"></span><span class="price">28</span></div>
+        <p class="desc">Prosciutto, salami, sharp cheddar, brie, house pickles, market fruit, mostarda, saltines.</p>
       </div>
     </div>
   </section>
 
-  <section class="menu-section" aria-labelledby="wine">
+  <section class="menu-section" aria-labelledby="ft">
     <div class="menu-section-head">
-      <h2 id="wine">Wine</h2>
-      <span class="serve">Glass / Bottle</span>
+      <h2 id="ft">Fry Time</h2>
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="row"><span class="name">Batiso</span><span class="dots"></span><span class="price">16 / 64</span></div>
-        <p class="desc">Prosecco · Italy.</p>
+        <div class="row"><span class="name">Crab Cakes<span class="tag">Shellfish</span></span><span class="dots"></span><span class="price">32</span></div>
+        <p class="desc">French-style Dungeness crab cakes, corn sabayon, green tomato chow chow, arugula, cajun rémoulade.</p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">Bonaval</span><span class="dots"></span><span class="price">12 / 45</span></div>
-        <p class="desc">Cava Brut · Spain.</p>
+        <div class="row"><span class="name">Fried Green Tomatoes</span><span class="dots"></span><span class="price">18</span></div>
+        <p class="desc">Panko-breaded fried green tomatoes, burrata, basil aïoli, pickled cherry peppers, baby greens.<span class="tag">Veg</span></p>
       </div>
       <div class="menu-item">
-        <div class="row"><span class="name">Cesari</span><span class="dots"></span><span class="price">13 / 50</span></div>
-        <p class="desc">Pinot Grigio · Italy.</p>
-      </div>
-      <div class="menu-item">
-        <div class="row"><span class="name">Division</span><span class="dots"></span><span class="price">18 / 70</span></div>
-        <p class="desc">Chardonnay · Oregon.</p>
-      </div>
-      <div class="menu-item">
-        <div class="row"><span class="name">Tranche</span><span class="dots"></span><span class="price">14 / 58</span></div>
-        <p class="desc">Rosé · Washington.</p>
-      </div>
-      <div class="menu-item">
-        <div class="row"><span class="name">Esja</span><span class="dots"></span><span class="price">16 / 60</span></div>
-        <p class="desc">Orange · Washington.</p>
-      </div>
-      <div class="menu-item">
-        <div class="row"><span class="name">Domaine d'Ansignan</span><span class="dots"></span><span class="price">15 / 60</span></div>
-        <p class="desc">Red Blend · France.</p>
+        <div class="row"><span class="name">Fish n Chip</span><span class="dots"></span><span class="price">24</span></div>
+        <p class="desc">Panko &amp; parmesan crusted beer-battered rock fish, crispy fries, slaw, caper aïoli.</p>
       </div>
     </div>
   </section>
 
-  <section class="menu-section" aria-labelledby="coffee">
+  <section class="menu-section" aria-labelledby="hh">
     <div class="menu-section-head">
-      <h2 id="coffee">Coffee</h2>
-      <span class="serve">Local Goods · Orcas Island, WA</span>
+      <h2 id="hh">Handhelds</h2>
+      <span class="serve">Comes with fries</span>
     </div>
-    <ul class="drink-list">
-      <li>Drip Coffee</li>
-      <li>Latte</li>
-      <li>Mocha</li>
-      <li>Americano</li>
-      <li>Cappuccino</li>
-      <li>Cortado</li>
-      <li>Double Espresso</li>
-      <li>Chai</li>
-    </ul>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="row"><span class="name">Tomato Sando</span><span class="dots"></span><span class="price">20</span></div>
+        <p class="desc">Heirloom tomato, marinated cucumber, pickled shallot, dukkah, basil aïoli, herbs, toasted house focaccia.<span class="tag">Veg</span></p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Crabby Patty</span><span class="dots"></span><span class="price">30</span></div>
+        <p class="desc">French-style Dungeness crab cake, butter lettuce, tomato, pickled red onion, caper aïoli, toasted brioche bun.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">The Lawn Burger<span class="tag">Raw</span></span><span class="dots"></span><span class="price">23</span></div>
+        <p class="desc">Sharp white cheddar, smoked bacon, spicy mayo, arugula, shaved red onion, sherry &amp; maple vinaigrette, toasted brioche bun.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="menu-section" aria-labelledby="general">
+  <section class="menu-section" aria-labelledby="ad">
     <div class="menu-section-head">
-      <h2 id="general">Beverages, Generally</h2>
+      <h2 id="ad">Additions</h2>
     </div>
-    <ul class="drink-list">
-      <li>Rosario Fog</li>
-      <li>Hot Chocolate</li>
-      <li>Steamed Milk</li>
-      <li>Hot Tea</li>
-      <li>Iced Tea</li>
-      <li>Juice</li>
-      <li>Coconut Water</li>
-      <li>San Pellegrino Aranciata</li>
-      <li>San Pellegrino Limonata</li>
-      <li>San Pellegrino Plain</li>
-      <li>Can Coke</li>
-      <li>Can Diet Coke</li>
-      <li>Bottle Coke</li>
-      <li>Root Beer</li>
-      <li>Cream Soda</li>
-      <li>Lemonade</li>
-    </ul>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="row"><span class="name">Fries</span><span class="dots"></span><span class="price">10</span></div>
+        <p class="desc">Rosemary salt.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Side Salad</span><span class="dots"></span><span class="price">10</span></div>
+        <p class="desc">Tossed greens, vinaigrette.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Potato Salad</span><span class="dots"></span><span class="price">10</span></div>
+        <p class="desc">Why not.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Jamón &amp; Brie</span><span class="dots"></span><span class="price">18</span></div>
+        <p class="desc">Prosciutto, brie, softened butter, house focaccia.</p>
+      </div>
+      <div class="menu-item">
+        <div class="row"><span class="name">Cup of Fruit</span><span class="dots"></span><span class="price">12</span></div>
+        <p class="desc">Melon, apple, berries.</p>
+      </div>
+    </div>
   </section>
 
 </main>
 
 <div class="menu-foot">
-  <p>Menus change with the season — ask our counter for today's pours and specials.</p>
+  <p>Menus change with the season and the day's catch — ask our counter for today's specials and lawn offerings.</p>
+  <p class="fine">+ Consuming raw or undercooked meats or seafood may increase your risk of foodborne illness. &nbsp;·&nbsp; * Contains shellfish.</p>
   <a class="btn btn--ghost-dark" href="menu.html">View Breakfast</a>
-  <a class="btn btn--ghost-dark" href="lunch.html">View Lunch</a>
-  <a class="btn btn--ghost-dark" href="index.html#location">Plan Your Visit</a>
+  <a class="btn btn--ghost-dark" href="beverages.html">View Beverages</a>
 </div>
 
 <footer>
