@@ -273,6 +273,32 @@ h1,h2,h3,h4{
   filter:grayscale(1) contrast(1.04);
 }
 
+/* ─── RAW BAR ─── */
+.feature{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+  background:var(--black);
+  color:#fff;
+}
+.feature-photo{position:relative;overflow:hidden;min-height:420px}
+.feature-photo img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(1.15) contrast(1.03);
+}
+.feature-copy{
+  padding:7rem 6vw;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.feature-copy h2{
+  font-size:clamp(2.2rem,3.6vw,3.4rem);
+  text-transform:uppercase;letter-spacing:.005em;
+  color:#fff;margin-bottom:1.7rem;
+}
+.feature-copy h2 .alt{color:var(--gold);display:block}
+.feature-copy p{color:var(--muted-light);font-size:1.02rem;max-width:30rem;margin-bottom:1.4rem}
+.feature-copy .btn{align-self:flex-start;margin-top:1.4rem}
+
 /* ─── FOOTER ─── */
 footer{
   background:var(--black);color:rgba(255,255,255,.7);
@@ -394,6 +420,9 @@ footer{
   .history{grid-template-columns:1fr}
   .history-copy{padding:4rem 2rem;order:1}
   .history-photo{order:2;min-height:300px}
+  .feature{grid-template-columns:1fr}
+  .feature-copy{padding:4rem 2rem;order:1}
+  .feature-photo{order:2;min-height:300px}
   .arrive{padding:4rem 1.6rem}
   .arrive-grid{grid-template-columns:1fr;gap:0}
   .arrive-card{padding-top:2rem;margin-top:2rem}
@@ -491,6 +520,18 @@ footer{
       </ul>
       <a class="btn btn--ghost-light" href="#about">Learn More</a>
     </div>
+  </div>
+</section>
+
+<section class="feature" aria-label="From the raw bar">
+  <div class="feature-photo">
+    <img src="images/oysters-on-ice.webp" alt="Fresh local oysters served on ice at Blackfish Café" loading="lazy" decoding="async">
+  </div>
+  <div class="feature-copy">
+    <span class="eyebrow">From the Raw Bar</span>
+    <h2>Straight From the Harbor<span class="alt">Onto Your Ice.</span></h2>
+    <p>Local oysters, Dungeness crab, and the day's shellfish, shucked to order and served ice-cold with mignonette, cocktail sauce, and a wedge of lemon.</p>
+    <a class="btn btn--ghost-light" href="lunch.html">See the Lunch Menu</a>
   </div>
 </section>
 
