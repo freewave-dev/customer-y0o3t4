@@ -189,6 +189,13 @@ h1,h2,h3,h4{
 .hero-inner{animation:rise 1.2s cubic-bezier(.16,1,.3,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 
+/* ─── SHOWCASE PHOTO ─── */
+.showcase{position:relative;overflow:hidden;min-height:52vh;background:var(--black)}
+.showcase img{
+  width:100%;height:100%;object-fit:cover;
+  filter:blur(1px) saturate(1.15) brightness(1.02) contrast(.98);
+}
+
 /* ─── INFO BAND ─── */
 .band{
   background:var(--black);
@@ -398,6 +405,7 @@ footer{
   .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
   .hero{grid-template-columns:1fr;min-height:0}
   .hero-photo{min-height:56vh}
+  .showcase{min-height:36vh}
   .hero-copy{padding:4rem 2rem}
   .band{padding:3.5rem 1.6rem}
   .band-grid{grid-template-columns:1fr;gap:0}
@@ -476,6 +484,10 @@ footer{
     </div>
   </div>
 </header>
+
+<section class="showcase" aria-label="Blackfish Café waterfront view">
+  <img src="images/Cafe.breakfast.best_lunch._Madrona.outlook.buckbay.orcas.san.juans.rosario.webp" alt="Waterfront view from Blackfish Café overlooking Buck Bay at Rosario Harbor" loading="lazy" decoding="async">
+</section>
 
 <section class="band" id="location">
   <div class="band-grid">
