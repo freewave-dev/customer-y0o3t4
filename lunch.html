@@ -150,8 +150,11 @@ h1,h2,h3,h4{
   transition:opacity .25s,transform .25s,visibility .25s;
   border:1px solid rgba(255,255,255,.1);
 }
-.nav li.has-dropdown:hover .dropdown,
 .nav li.has-dropdown.open .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+/* hover-reveal only with a real pointer — iOS hover emulation eats first taps */
+@media (hover:hover){
+  .nav li.has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+}
 .nav .dropdown li{width:100%}
 .nav .dropdown a{display:block;padding:.65rem 1.4rem;white-space:nowrap}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:.4rem}
@@ -536,31 +539,38 @@ footer{
 (function(){
   var toggle=document.querySelector('.nav-toggle');
   var menu=document.querySelector('.nav ul');
+  var dropdownItem=document.querySelector('.nav li.has-dropdown');
+  var dropdownToggle=dropdownItem.querySelector('.dropdown-toggle');
+  function closeDropdown(){
+    dropdownItem.classList.remove('open');
+    dropdownToggle.setAttribute('aria-expanded','false');
+  }
+  function closeNav(){
+    menu.classList.remove('open');toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    closeDropdown();
+  }
   toggle.addEventListener('click',function(){
     var open=menu.classList.toggle('open');
     toggle.classList.toggle('open',open);
     toggle.setAttribute('aria-expanded',open);
+    if(!open)closeDropdown();
   });
   menu.querySelectorAll('a').forEach(function(a){
     if(a.classList.contains('dropdown-toggle'))return;
-    a.addEventListener('click',function(){
-      menu.classList.remove('open');toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    });
+    a.addEventListener('click',closeNav);
   });
-  var dropdownItem=document.querySelector('.nav li.has-dropdown');
-  var dropdownToggle=dropdownItem.querySelector('.dropdown-toggle');
   dropdownToggle.addEventListener('click',function(e){
     e.preventDefault();
     var open=dropdownItem.classList.toggle('open');
     dropdownToggle.setAttribute('aria-expanded',open);
   });
   document.addEventListener('click',function(e){
-    if(!dropdownItem.contains(e.target)){
-      dropdownItem.classList.remove('open');
-      dropdownToggle.setAttribute('aria-expanded','false');
-    }
+    if(dropdownItem.classList.contains('open')&&!dropdownItem.contains(e.target))closeDropdown();
   });
+  // Safari restores the DOM as-is from its back/forward cache when returning
+  // from another tab (open menus included) — reset to a clean slate.
+  window.addEventListener('pageshow',closeNav);
 })();
 </script>
 </body>
