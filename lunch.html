@@ -140,6 +140,19 @@ h1,h2,h3,h4{
 }
 .nav ul a:hover{color:#fff}
 .nav ul a.active{color:var(--gold)}
+.nav li.has-dropdown{position:relative}
+.nav .dropdown{
+  list-style:none;position:absolute;top:100%;left:0;margin-top:.9rem;
+  background:var(--black-2);min-width:220px;padding:.5rem 0;
+  display:flex;flex-direction:column;gap:0;
+  opacity:0;visibility:hidden;transform:translateY(6px);
+  transition:opacity .25s,transform .25s,visibility .25s;
+  border:1px solid rgba(255,255,255,.1);
+}
+.nav li.has-dropdown:hover .dropdown,
+.nav li.has-dropdown.open .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.nav .dropdown li{width:100%}
+.nav .dropdown a{display:block;padding:.65rem 1.4rem;white-space:nowrap}
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:.4rem}
 .nav-toggle span{width:24px;height:1.5px;background:#fff;display:block;transition:.3s}
 
@@ -303,6 +316,12 @@ footer{
   }
   .nav ul.open{transform:translateX(0)}
   .nav ul a{font-size:.9rem}
+  .nav .dropdown{
+    position:static;opacity:1;visibility:visible;transform:none;
+    background:none;border:0;padding:.9rem 0 0 1rem;margin-top:0;display:none;
+  }
+  .nav li.has-dropdown.open .dropdown{display:flex}
+  .nav .dropdown a{padding:.5rem 0;font-size:.82rem}
   .nav-toggle{display:flex;z-index:70}
   .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
   .nav-toggle.open span:nth-child(2){opacity:0}
@@ -340,7 +359,13 @@ footer{
     <li><a href="beverages.html">Beverages</a></li>
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#location">Location</a></li>
-    <li><a href="https://harborbarorcas.com" target="_blank" rel="noopener">Sister Restaurants</a></li>
+    <li class="has-dropdown">
+      <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Sister Restaurants</a>
+      <ul class="dropdown">
+        <li><a href="https://harborbarorcas.com" target="_blank" rel="noopener">Harbor Bar &amp; Grill</a></li>
+        <li><a href="https://lowertavern.com" target="_blank" rel="noopener">The Lower Tavern</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -516,10 +541,24 @@ footer{
     toggle.setAttribute('aria-expanded',open);
   });
   menu.querySelectorAll('a').forEach(function(a){
+    if(a.classList.contains('dropdown-toggle'))return;
     a.addEventListener('click',function(){
       menu.classList.remove('open');toggle.classList.remove('open');
       toggle.setAttribute('aria-expanded','false');
     });
+  });
+  var dropdownItem=document.querySelector('.nav li.has-dropdown');
+  var dropdownToggle=dropdownItem.querySelector('.dropdown-toggle');
+  dropdownToggle.addEventListener('click',function(e){
+    e.preventDefault();
+    var open=dropdownItem.classList.toggle('open');
+    dropdownToggle.setAttribute('aria-expanded',open);
+  });
+  document.addEventListener('click',function(e){
+    if(!dropdownItem.contains(e.target)){
+      dropdownItem.classList.remove('open');
+      dropdownToggle.setAttribute('aria-expanded','false');
+    }
   });
 })();
 </script>
